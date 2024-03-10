@@ -1,0 +1,18 @@
+{
+  "name": "seleniumpractice",
+  "version": "1.0.0",
+  "description": "To automate the components using selenium",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Nagarajan",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "chromedriver": "^122.0.4",
+    "expect": "^29.7.0",
+    "mocha": "^10.3.0",
+    "selenium-webdriver": "^4.18.1"
+  }
+}
