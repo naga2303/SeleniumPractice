@@ -1,4 +1,4 @@
-const {By, Builder} = require('selenium-webdriver')
+const {By, Builder,Key} = require('selenium-webdriver')
 const {Select} = require('selenium-webdriver')
 const {assert} = require('assert')
 
@@ -16,7 +16,20 @@ describe("To Verify the dropdowns",()=>{
 
     })
     it("To select and verify the selected text",async()=>{
-        
+        let dropdown = await driver.findElement(By.id('superheros'))
+       let option1 = await driver.findElement(By.xpath("//option[text()='Ant-Man']"))
+       let option2 = await driver.findElement(By.xpath("//option[text()='Batman']"))
+
+       let actions = driver.actions({async:true})
+       await actions.keyDown(Key.CONTROL).click(option1).click(option2).keyUp(Key.CONTROL).perform()
+
+       //To get the selected options
+       let selectedOptions = await dropdown.getAllSelectedOptions();
+
+       for (let a of selectedOptions){
+        console.log(await a.getText())
+       }
+      
     })
     after("To Close the browser",async()=>{
         await driver.close()
