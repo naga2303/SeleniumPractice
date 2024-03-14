@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+      "allowJs": true, // Allow IntelliSense for JavaScript files
+      "outDir": "./.built/" // Optional output directory (if needed)
+    }
+  }

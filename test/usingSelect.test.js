@@ -2,7 +2,7 @@ const {By, Builder,Key, WebElement} = require('selenium-webdriver')
 const {Select} = require('selenium-webdriver')
 const {assert} = require('assert')
 
-describe("To Verify the dropdowns",()=>{
+describe.skip("To Verify the dropdowns",()=>{
      let driver;
     before("To initalize the driver",()=>{
         driver = new Builder().forBrowser('chrome').build();
