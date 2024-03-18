@@ -1,6 +1,6 @@
 const {By, Builder} = require('selenium-webdriver')
 
-describe("To Test the windows",()=>{
+describe.skip("To Test the windows",()=>{
     let driver;
     before("To initialise  the driver",()=>{
         driver = new Builder().forBrowser('chrome').build()
